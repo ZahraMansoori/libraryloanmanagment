@@ -17,5 +17,6 @@ Route::get('/', function () {
 
 Route::group(['prefix'=>'admin','namespace'=>'admin'],function (){
     Route::get('/','adminController@index');
+    Route::get('/user','adminController@create')->name('admin.createUser');
 
 });

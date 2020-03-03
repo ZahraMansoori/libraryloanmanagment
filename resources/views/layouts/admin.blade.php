@@ -20,16 +20,16 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
             {{--<li class="nav-item active">--}}
-                {{--<a class="nav-link" href="#">خانه <span class="sr-only">(current)</span></a>--}}
+            {{--<a class="nav-link" href="#">خانه <span class="sr-only">(current)</span></a>--}}
             {{--</li>--}}
             {{--<li class="nav-item">--}}
-                {{--<a class="nav-link" href="#">کتاب ها</a>--}}
+            {{--<a class="nav-link" href="#">کتاب ها</a>--}}
             {{--</li>--}}
 
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-اعضا                </a>
+                    کتاب ها </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="#">ثبت کتاب جدید</a>
                     <a class="dropdown-item" href="#">لیست امانت ها</a>
@@ -38,16 +38,25 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-کتاب ها                </a>
+                    اعضا </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">ثبت عضو جدید</a>
+                    <a class="dropdown-item" href="{{ route('admin.createUser') }}">ثبت عضو جدید</a>
                     <a class="dropdown-item" href="#">لیست اعضا</a>
                 </div>
             </li>
         </ul>
     </div>
 </nav>
+{{--<div class="container">--}}
+{{--<div class="row">--}}
+{{--<div class="col-xs-12 col-md-12">--}}
 @yield('content')
+
+
+{{--</div>--}}
+{{--</div>--}}
+{{--</div>--}}
+
 <script src="/public/js/jquery.min.js"></script>
 <script src="/public/js/bootstrap.min.js"></script>
 </body>

@@ -19,12 +19,6 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
-            {{--<li class="nav-item active">--}}
-            {{--<a class="nav-link" href="#">خانه <span class="sr-only">(current)</span></a>--}}
-            {{--</li>--}}
-            {{--<li class="nav-item">--}}
-            {{--<a class="nav-link" href="#">کتاب ها</a>--}}
-            {{--</li>--}}
 
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
@@ -47,15 +41,14 @@
         </ul>
     </div>
 </nav>
-{{--<div class="container">--}}
-{{--<div class="row">--}}
-{{--<div class="col-xs-12 col-md-12">--}}
-@yield('content')
+<div class="col col-xl-12">
+    <div class="card ">
+        <div class="card-header ">مدیریت</div>
+        <div class="card-body">@yield('content')</div>
+        <div class="card-footer">Footer</div>
+    </div>
+</div>
 
-
-{{--</div>--}}
-{{--</div>--}}
-{{--</div>--}}
 
 <script src="/public/js/jquery.min.js"></script>
 <script src="/public/js/bootstrap.min.js"></script>

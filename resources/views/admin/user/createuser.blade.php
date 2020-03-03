@@ -1,6 +1,4 @@
 @extends('layouts.admin');
 @section('content')
-    <form action="">
-        <input type="text" class="text">here
-    </form>
+    @include('admin.user.form')
 @endsection

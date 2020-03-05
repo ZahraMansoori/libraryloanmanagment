@@ -1,5 +1,5 @@
 @if(session('success'))
     <div class="alert alert-success">
-        <p>کاربر با موفقیت ایجاد شد.</p>
+        <p>{{session('success')}}</p>
     </div>
 @endif

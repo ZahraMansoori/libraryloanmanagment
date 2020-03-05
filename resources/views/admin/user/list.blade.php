@@ -8,6 +8,7 @@
                 <th>شناسه</th>
                 <th>نام</th>
                 <th>ایمیل</th>
+                <th>عملیات</th>
             </tr>
             </thead>
             @foreach($users as $user)

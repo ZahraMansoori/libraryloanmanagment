@@ -38,8 +38,25 @@ class adminController extends Controller
     ];
        $new_user_obj=User::create($user_data);
        if($new_user_obj instanceof User){
-           return redirect()->route('admin.userlist')->with('success',true);
+           return redirect()->route('admin.userlist')->with('success','کاربر جدید با موفقیت ثبت شد.');
        }
+    }
+
+    public function delete($user_id)
+    {
+        if($user_id && ctype_digit($user_id)){
+            $userItem=User::find($user_id);
+            if($userItem && $userItem instanceof User){
+                $user_id->delete();
+                return redirect(route(admin.userDelete))-with('succsee','کاربر مورد نظر با موفقیت حذف شد.');
+            }
+        }
+
+    }
+
+    public function edit()
+    {
+        
     }
 
 }

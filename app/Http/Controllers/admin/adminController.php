@@ -16,6 +16,11 @@ class adminController extends Controller
         return view('admin.dashboard.dashboard');
     }
 
+    public function showList(){
+        $users=User::all();
+        return view('admin.user.list',compact('users'));
+    }
+
     public function create()
     {
         return view('admin.user.createuser');
@@ -31,7 +36,10 @@ class adminController extends Controller
         'password'=>request()->input("password")
 
     ];
-       dd(User::create($user_data));
+       $new_user_obj=User::create($user_data);
+       if($new_user_obj instanceof User){
+           return redirect()->route('admin.userlist')->with('success',true);
+       }
     }
 
 }

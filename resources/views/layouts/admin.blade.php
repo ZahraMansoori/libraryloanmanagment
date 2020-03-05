@@ -35,7 +35,7 @@
                     اعضا </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="{{ route('admin.createUser') }}">ثبت عضو جدید</a>
-                    <a class="dropdown-item" href="#">لیست اعضا</a>
+                    <a class="dropdown-item" href="{{ route(('admin.userlist')) }}">لیست اعضا</a>
                 </div>
             </li>
         </ul>

@@ -1,2 +1,2 @@
-{{--<a href=""><span class="glyphicon glyphicon-edit"></span></a>--}}
-{{--<a href=""><span class="glyphicon glyphicon-trash"></span></a>--}}
+<a href="{{ route('admin.userEdit',$user->id) }}">ویرایش  |</a>
+<a href="{{ route('admin.userDelete',$user->id ) }}">  حذف</a>

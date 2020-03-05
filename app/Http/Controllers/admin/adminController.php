@@ -44,13 +44,14 @@ class adminController extends Controller
 
     public function delete($user_id)
     {
-        if($user_id && ctype_digit($user_id)){
-            $userItem=User::find($user_id);
-            if($userItem && $userItem instanceof User){
-                $user_id->delete();
-                return redirect(route(admin.userDelete))-with('succsee','کاربر مورد نظر با موفقیت حذف شد.');
-            }
-        }
+        dd($user_id);
+//        if($user_id && ctype_digit($user_id)){
+//            $userItem=User::find($user_id);
+//            if($userItem && $userItem instanceof User){
+//               $userItem->delete();
+//                return redirect()->route('admin.userDelete')->with('success','کاربر مورد نظر با موفقیت حذف شد.');
+//            }
+//        }
 
     }
 

@@ -1,20 +1,24 @@
 @extends('layouts.admin')
 @section('content')
     @include('admin.partials.notification')
-    @if($users && count($users)>0)
+    @if($books && count($books)>0)
         <table class="table table-bordered ">
             <thead>
             <tr>
                 <th>شناسه</th>
                 <th>نام</th>
-                <th>ایمیل</th>
+                <th>نام نویسنده</th>
+                <th>سال انشار</th>
+                <th>ناشر</th>
+                <th>نام مترجم</th>
+                <th>دسته بندی</th>
+                <th>قیمت</th>
                 <th>عملیات</th>
             </tr>
             </thead>
-            @foreach($users as $user)
-                @include('admin.user.itemsTable',$user)
+            @foreach($books as $book)
+                @include('$admin.book.itemsTable',$book)
             @endforeach
         </table>
     @endif
-    {{--@include('admin.user')--}}
 @endsection

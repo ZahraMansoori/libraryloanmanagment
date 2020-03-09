@@ -3,6 +3,8 @@
     <td>{{ $user->name }}</td>
     <td>{{ $user->email}}</td>
     <td style="text-align: center">
-       @include('admin.user.operation',$user)  </td>
+        <a href="{{ route('admin.userEdit',[$user->id]) }}">ویرایش |</a>
+        <a href="{{ route('admin.userDelete',[$user-> id ]) }}"> حذف</a>
+    </td>
 
 </tr>

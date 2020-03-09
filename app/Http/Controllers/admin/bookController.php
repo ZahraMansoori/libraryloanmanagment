@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers\admin;
 
-use App\Http\Requests;
+use App\Http\Requests\createBookFormReq;
+use App\Http\Requests\Requests\createBook;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -25,7 +26,7 @@ class bookController extends Controller
     }
 
 
-    public function store(createBookForm $createbookForm)
+    public function store(createBookFormReq $createbookForm)
     {
 
         $book_data = [
@@ -64,7 +65,7 @@ class bookController extends Controller
         }
     }
 
-    public function update(createBookForm $createbookForm, $book_id)
+    public function update(createBookFormReq $createbookForm, $book_id)
     {
         $book_data = [
             'name' => request()->input("name"),

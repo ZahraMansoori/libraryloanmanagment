@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -13,7 +13,7 @@ class createBook extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,8 +23,19 @@ class createBook extends FormRequest
      */
     public function rules()
     {
-        return [
-            //
+        $rules = [
+            'name' => 'required',
+            'author' => 'required',
+            'pub_year' => 'required',
+            'pub_name' => 'required',
+            'translator_name' => 'required',
+            'category' => 'required',
         ];
+
+//        if(request()->route('user_id') && intval(request()->route('user_id'))>0){
+//            unset($rules['password']);
+//        }
+        return $rules;
     }
 }
+

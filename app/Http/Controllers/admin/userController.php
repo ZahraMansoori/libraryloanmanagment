@@ -9,7 +9,7 @@ use http\Env\Request;
 
 //use Illuminate\Http\Request;
 
-class adminController extends Controller
+class userController extends Controller
 {
     public function index()
     {

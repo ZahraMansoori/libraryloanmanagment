@@ -5,12 +5,12 @@
             {{ csrf_field() }}
             <div class="form-group">
                 <label for="name">نام کتاب</label>
-                <input type="text" class="form-control" id="name" name="name" value="{{old('name',$bookItem->name)}}">
+                <input type="text" class="form-control" id="name" name="name" value="{{old('name')}}">
             </div>
             <div class="form-group">
                 <label for="author">نویسنده</label>
                 <input type="text" class="form-control" id="author" name="author"
-                       value="{{old('author',$bookItem->author)}}">
+                       value="{{old('author')}}">
             </div>
             <div class="form-group">
                 <label for="pub_year">سال انشار</label>

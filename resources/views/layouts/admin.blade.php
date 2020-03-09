@@ -25,7 +25,8 @@
                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     کتاب ها </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">ثبت کتاب جدید</a>
+                    <a class="dropdown-item" href="{{ route('admin.createBookForm') }}">ثبت کتاب جدید</a>
+                    <a class="dropdown-item" href="{{ route('admin.bookList') }}">لیست کتاب ها</a>
                     <a class="dropdown-item" href="#">لیست امانت ها</a>
                 </div>
             </li>

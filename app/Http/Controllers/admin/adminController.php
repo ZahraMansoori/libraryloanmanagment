@@ -59,7 +59,7 @@ class adminController extends Controller
         if ($user_id && ctype_digit($user_id)) {
             $userItem = User::find($user_id);
             if ($userItem && $userItem instanceof User) {
-                return view('admin.userEdit', compact('userItem'));
+                return view('admin.user.edit', compact('userItem'));
             }
         }
     }

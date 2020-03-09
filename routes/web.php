@@ -20,10 +20,9 @@ Route::group(['prefix'=>'admin','namespace'=>'admin'],function (){
     Route::get('/userCreate','adminController@create')->name('admin.createUserForm');
     Route::post('/userCreate','adminController@store')->name('admin.createUser');
     Route::get('/userList','adminController@showList')->name('admin.userlist');
-    Route::get('/userList/delete/{$user_id}','adminController@delete')->name('admin.userDelete');
-//    Route::resource('/userList/delete', 'adminController',['only'=> ['index','create','store','showList']]);
+    Route::get('/userList/delete/{user_id}','adminController@delete')->name('admin.userDelete');
 
-    Route::get('/userList/edit/{$user_id}','adminController@edit')->name('admin.userEdit');
-    Route::post('/userList/edit/{$user_id}','adminController@update')->name('admin.userUpdate');
+    Route::get('/userList/edit/{user_id}','adminController@edit')->name('admin.userEdit');
+    Route::post('/userList/edit/{user_id}','adminController@update')->name('admin.userUpdate');
 
 });

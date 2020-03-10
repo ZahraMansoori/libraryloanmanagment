@@ -37,7 +37,7 @@ class bookController extends Controller
             'pub_name' => request()->input("pub_name"),
             'translator_name' => request()->input("translator_name"),
             'category' => request()->input('category'),
-            'price' => request()->input("price")
+            'num' => request()->input("num")
         ];
         $new_book_obj = Book::create($book_data);
         if ($new_book_obj instanceof Book) {
@@ -47,11 +47,15 @@ class bookController extends Controller
 
     public function delete($book_id)
     {
+
         if ($book_id && ctype_digit($book_id)) {
-            $bookItem = إook::find($book_id);
-            if ($bookItem && $bookItem instanceof إook) {
+
+            $bookItem =Book::find($book_id);
+
+            if ($bookItem && $bookItem instanceof Book){
+
                 $bookItem->delete();
-                return redirect()->route('admin.book»ist')->with('success', 'کتاب مورد نظر با موفقیت حذف شد.');
+                return redirect()->route('admin.bookList')->with('success', 'کتاب مورد نظر با موفقیت حذف شد.');
             }
         }
     }
@@ -75,7 +79,7 @@ class bookController extends Controller
             'pub_name' => request()->input("pub_name"),
             'translator_name' => request()->input("translator_name"),
             'category' => request()->input('category'),
-            'price' => request()->input("price")
+            'num' => request()->input("num")
         ];
 
 //        if (!Request()->has('password')) {

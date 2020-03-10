@@ -37,7 +37,7 @@
             <br/>
             <br/>
             <div class="form-group ">
-                <label for="price">قیمت</label>
+                <label for="price">تعداد موجود</label>
                 <input type="text" class="form-control" id="price" name="price">
             </div>
             <input type="submit" class="btn btn-outline-success float-right" value="ذخیره اطلاعات">

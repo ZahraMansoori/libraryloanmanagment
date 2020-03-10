@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/public/css/bootstrap.min.css">
     <link rel="stylesheet" href="/public/css/bootstrap-rtl.min.css">
+    <link rel="stylesheet" href="/public/css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="/public/css/style.css">
     <title>Library admin panel</title>
 </head>

@@ -2,6 +2,7 @@
 
 namespace App\Model;
 
+use http\Client\Curl\User;
 use Illuminate\Database\Eloquent\Model;
 
 class book extends Model
@@ -10,4 +11,9 @@ class book extends Model
     protected $fillable=[
       'name','author','pub_year','pub_name','translator_name','category','price'
     ];
+
+    public function User()
+    {
+        return $this->belongsToMany(User::class);
+  }
 }

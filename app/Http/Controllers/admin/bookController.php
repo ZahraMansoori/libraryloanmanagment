@@ -39,11 +39,12 @@ class bookController extends Controller
             'category' => request()->input('category'),
             'num' => request()->input("num")
         ];
-        $new_book_obj = Book::create($book_data);
-        if ($new_book_obj instanceof Book) {
-            return redirect()->route('admin.bookList')->with('success', 'کتاب جدید با موفقیت ثبت شد.');
-        }
-    }
+        dd($book_data);
+//        $new_book_obj = Book::create($book_data);
+//        if ($new_book_obj instanceof Book) {
+//            return redirect()->route('admin.bookList')->with('success', 'کتاب جدید با موفقیت ثبت شد.');
+//        }
+}
 
     public function delete($book_id)
     {

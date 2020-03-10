@@ -24,20 +24,23 @@
                 <label for="translator_name">نام مترجم</label>
                 <input type="text" class="form-control" id="translator_name" name="translator_name">
             </div>
-            <div>
+            <br/>
+            <div class=" form-group float-right">
                 <label for="category">دسته بندی</label>
                 <select name="category" id="category">
-                <option value="">علمی و تخیلی</option>
-                <option value="">درسی و کمک درسی</option>
-                <option value="">داستان و رمان</option>
-                <option value="">پژوهشی</option>
-                </select><
-                </div>
-            <div class="form-group">
+                    <option value="1">علمی و تخیلی</option>
+                    <option value="2">درسی و کمک درسی</option>
+                    <option value="3">داستان و رمان</option>
+                    <option value="4">پژوهشی</option>
+                </select>
+            </div>
+            <br/>
+            <br/>
+            <div class="form-group ">
                 <label for="price">قیمت</label>
                 <input type="text" class="form-control" id="price" name="price">
             </div>
-                <input type="submit" class="btn btn-outline-success float-right" value="ذخیره اطلاعات">
+            <input type="submit" class="btn btn-outline-success float-right" value="ذخیره اطلاعات">
 
         </form>
     </div>

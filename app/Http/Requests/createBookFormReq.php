@@ -23,7 +23,7 @@ class createBookFormReq extends FormRequest
             'author' => 'required',
             'pub_year' => 'required',
             'pub_name' => 'required',
-            'translator_name' => 'required',
+//            'translator_name' => 'required',
             'category' => 'required',
         ];
 

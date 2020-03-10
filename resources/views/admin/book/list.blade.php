@@ -17,7 +17,7 @@
             </tr>
             </thead>
             @foreach($books as $book)
-                @include('$admin.book.itemsTable',$book)
+                @include('admin.book.itemsTable',$book)
             @endforeach
         </table>
     @endif

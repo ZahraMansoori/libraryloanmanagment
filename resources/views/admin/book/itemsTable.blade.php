@@ -7,8 +7,8 @@
     <td>{{ $book->category}}</td>
     <td>{{ $book->price}}</td>
     <td style="text-align: center">
-        <a href="{{ route('admin.bookEdit',[$user->id]) }}">ویرایش |</a>
-        <a href="{{ route('admin.bookDelete',[$user-> id ]) }}"> حذف</a>
+        <a href="{{ route('admin.bookEdit',[$book->id]) }}">ویرایش |</a>
+        <a href="{{ route('admin.bookDelete',[$book-> id ]) }}"> حذف</a>
     </td>
 
 </tr>

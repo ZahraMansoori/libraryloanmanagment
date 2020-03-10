@@ -4,6 +4,7 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Requests\createBookFormReq;
 use App\Http\Requests\Requests\createBook;
+use App\Model\book;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 

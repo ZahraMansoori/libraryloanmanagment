@@ -12,8 +12,8 @@ class book extends Model
       'name','author','pub_year','pub_name','translator_name','category','price'
     ];
 
-    public function User()
+    public function Users()
     {
-        return $this->belongsToMany(User::class);
+        return $this->belongsToMany(User::class,book_user);
   }
 }

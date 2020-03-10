@@ -19,9 +19,9 @@ class User extends Authenticatable
         'password', 'remember_token'
     ];
 
-    public function Book()
+    public function Books()
     {
-        return $this->belongsToMany(Book::class);
+        return $this->belongsToMany(Book::class,book_user);
     }
 
     public function setPasswordAttribute($value)

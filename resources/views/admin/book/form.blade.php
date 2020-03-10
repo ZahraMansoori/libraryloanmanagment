@@ -5,24 +5,24 @@
             {{ csrf_field() }}
             <div class="form-group">
                 <label for="name">نام کتاب</label>
-                <input type="text" class="form-control" id="name" name="name" value="{{old('name')}}">
+                <input type="text" class="form-control" id="name" name="name" value="{{old('name',$bookItem->name)}}">
             </div>
             <div class="form-group">
                 <label for="author">نویسنده</label>
                 <input type="text" class="form-control" id="author" name="author"
-                       value="{{old('author')}}">
+                       value="{{old('author',$bookItem->author)}}">
             </div>
             <div class="form-group">
                 <label for="pub_year">سال انشار</label>
-                <input type="text" class="form-control" id="pub_year" name="pub_year">
+                <input type="text" class="form-control" id="pub_year" name="pub_year" value="{{old('pub_year',$bookItem->pub_year)}}">
             </div>
             <div class="form-group">
                 <label for="pub_name">ناشر</label>
-                <input type="text" class="form-control" id="pub_name" name="pub_name">
+                <input type="text" class="form-control" id="pub_name" name="pub_name" value="{{old('pub_name',$bookItem->pub_name)}}">
             </div>
             <div class="form-group">
                 <label for="translator_name">نام مترجم</label>
-                <input type="text" class="form-control" id="translator_name" name="translator_name">
+                <input type="text" class="form-control" id="translator_name" name="translator_name" value="{{old('translator_name',$bookItem->translator_name)}}">
             </div>
             <br/>
             <div class=" form-group float-right">
@@ -37,8 +37,8 @@
             <br/>
             <br/>
             <div class="form-group ">
-                <label for="price">تعداد موجود</label>
-                <input type="text" class="form-control" id="price" name="price">
+                <label for="num">تعداد موجود</label>
+                <input type="text" class="form-control" id="num" name="num" value="{{old('num',$bookItem->num)}}">
             </div>
             <input type="submit" class="btn btn-outline-success float-right" value="ذخیره اطلاعات">
 

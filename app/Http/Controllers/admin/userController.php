@@ -83,4 +83,9 @@ class userController extends Controller
 
     }
 
+    public function selector($user_id)
+    {
+        return view('admin.user.userLoan',compact("user_id"));
+    }
+
 }

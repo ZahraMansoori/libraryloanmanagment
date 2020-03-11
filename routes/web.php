@@ -25,6 +25,7 @@ Route::group(['prefix'=>'admin','namespace'=>'admin'],function (){
     Route::get('/userList/delete/{user_id}','userController@delete')->name('admin.userDelete');
     Route::get('/userList/edit/{user_id}','userController@edit')->name('admin.userEdit');
     Route::post('/userList/edit/{user_id}','userController@update')->name('admin.userUpdate');
+    Route::get('/userLoan/{user_id}','userController@selector')->name('admin.loanControl');
     
     //books
     Route::get('/','userController@index')->name('dashboard');

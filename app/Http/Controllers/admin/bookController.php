@@ -99,7 +99,9 @@ class bookController extends Controller
             $books=Book::all();
             $user=User::find($user_id);
             $booser=$user->Books()->get()->pluck('book_id')->toArray();
-            return view('admin.user.userLoan',compact('books'));
+            dd($booser);
+
+//            return view('admin.user.userLoan',compact('books','booser'));
         }
     }
 

@@ -97,6 +97,8 @@ class bookController extends Controller
     {
         if($user_id && ctype_digit($user_id)){
             $books=Book::all();
+            $user=User::find($user_id);
+            $booser=$user->Books()->get()->pluck('book_id')->toArray();
             return view('admin.user.userLoan',compact('books'));
         }
     }
@@ -108,9 +110,9 @@ class bookController extends Controller
             $bookss=$request->input('bookss');
             if($userItem && is_array($bookss) && count($bookss)>0){
                 $userItem->Books()->sync($bookss);
+                return redirect()->route('admin.userlist');
             }
         }
-        dd($bookss);
     }
 }
     

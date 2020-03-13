@@ -91,4 +91,12 @@ class bookController extends Controller
         return redirect()->route('admin.bookList')->with('success', 'کتاب مورد نظر با موفقیت به روز رسانی شد.');
 
     }
+
+    public function showBookList($user_id)
+    {
+        if($user_id && ctype_digit($user_id)){
+            $book=Book::all();
+            return view('admin.user.userLoan',compact('book'));
+        }
+    }
 }

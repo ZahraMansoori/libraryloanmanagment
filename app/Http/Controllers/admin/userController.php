@@ -83,13 +83,6 @@ class userController extends Controller
 
     }
 
-    public function selector($user_id)
-    {
-        if($user_id && ctype_digit($user_id)){
-            $userItem=User::find($user_id);
-//            $userItem->Books()->;
-        }
-        return view('admin.user.userLoan',compact("user_id"));
-    }
+
 
 }

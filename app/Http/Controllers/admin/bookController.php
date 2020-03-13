@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Requests\createBookFormReq;
 use App\Http\Requests\Requests\createBook;
 use App\Model\book;
+use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -95,8 +96,21 @@ class bookController extends Controller
     public function showBookList($user_id)
     {
         if($user_id && ctype_digit($user_id)){
-            $book=Book::all();
-            return view('admin.user.userLoan',compact('book'));
+            $books=Book::all();
+            return view('admin.user.userLoan',compact('books'));
         }
     }
+
+    public function updateUserLoan(request $request,$user_id)
+    {
+        if($user_id && ctype_digit($user_id)){
+            $userItem=User::find($user_id);
+            $bookss=$request->input('bookss');
+            if($userItem && is_array($bookss) && count($bookss)>0){
+                $userItem->Books()->sync($bookss);
+            }
+        }
+        dd($bookss);
+    }
 }
+    

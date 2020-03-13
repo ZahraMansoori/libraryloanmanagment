@@ -26,7 +26,8 @@ Route::group(['prefix'=>'admin','namespace'=>'admin'],function (){
     Route::get('/userList/edit/{user_id}','userController@edit')->name('admin.userEdit');
     Route::post('/userList/edit/{user_id}','userController@update')->name('admin.userUpdate');
     Route::get('/userLoan/{user_id}','bookController@showBookList')->name('admin.loanControl');
-    
+    Route::post('/userLoan/{user_id}','bookController@updateUserLoan')->name('admin.updateUserLoan');
+
     //books
     Route::get('/','userController@index')->name('dashboard');
     Route::get('/bookCreate','bookController@create')->name('admin.createBookForm');

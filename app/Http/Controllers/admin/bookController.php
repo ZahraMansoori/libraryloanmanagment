@@ -98,10 +98,10 @@ class bookController extends Controller
         if($user_id && ctype_digit($user_id)){
             $books=Book::all();
             $user=User::find($user_id);
-            $booser=$user->Books()->get()->pluck('book_id')->toArray();
-            dd($booser);
-
-//            return view('admin.user.userLoan',compact('books','booser'));
+            $booser=$user->Books()->get()->pluck('id')->toArray();;
+//            dd($booser);
+//
+            return view('admin.user.userLoan',compact('books','booser'));
         }
     }
 
